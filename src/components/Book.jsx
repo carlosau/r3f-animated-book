@@ -85,11 +85,9 @@ const pageMaterials = [
   }),
 ];
 
-const pageUrl = process.env.PUBLIC_URL; // Get the public URL
-
 pages.forEach((page) => {
-    useTexture.preload(`${pageUrl}/textures/${page.front}.jpg`);
-    useTexture.preload(`${pageUrl}/textures/${page.back}.jpg`);
+    useTexture.preload(`${process.env.PUBLIC_URL}/textures/${page.front}.jpg`);
+    useTexture.preload(`${process.env.PUBLIC_URL}/textures/${page.back}.jpg`);
 });
 
 const Page = ({ number, front, back, page, opened, bookClosed, ...props }) => {
