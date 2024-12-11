@@ -50,7 +50,7 @@ export const UI = () => {
           className="pointer-events-auto mt-10 ml-10"
           href="https://lessons.wawasensei.dev/courses/react-three-fiber"
         >
-          <h1 className="text-3xl font-bold tracking-wider">IMÓVEIS</h1>
+          <h1 className="text-4xl tracking-wider text-white">IMÓVEIS</h1>
         </a>
         <div className="w-full overflow-auto pointer-events-auto flex justify-center">
           <div className="overflow-auto flex items-center gap-4 max-w-full p-10">
