@@ -85,15 +85,17 @@ const pageMaterials = [
   }),
 ];
 
+const pageUrl = process.env.PUBLIC_URL; // Get the public URL
+
 pages.forEach((page) => {
-  useTexture.preload(`/textures/${page.front}.jpg`);
-  useTexture.preload(`/textures/${page.back}.jpg`);
+    useTexture.preload(`${pageUrl}/textures/${page.front}.jpg`);
+    useTexture.preload(`${pageUrl}/textures/${page.back}.jpg`);
 });
 
 const Page = ({ number, front, back, page, opened, bookClosed, ...props }) => {
   const [picture, picture2, pictureRoughness] = useTexture([
-    `/textures/${front}.jpg`,
-    `/textures/${back}.jpg`,
+    `${process.env.PUBLIC_URL}/textures/${front}.jpg`,
+    `${process.env.PUBLIC_URL}/textures/${back}.jpg`,
     ...(number === 0 || number === pages.length - 1
    ? []
       : []),
