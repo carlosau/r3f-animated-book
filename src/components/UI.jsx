@@ -39,7 +39,7 @@ export const UI = () => {
   const [page, setPage] = useAtom(pageAtom);
 
   useEffect(() => {
-    const audio = new Audio("/audios/page-flip-01a.mp3");
+    const audio = new Audio("https://carlosau.github.io/r3f-animated-book/audios/page-flip-01a.mp3");
     audio.play();
   }, [page]);
 
@@ -48,9 +48,11 @@ export const UI = () => {
       <main className=" pointer-events-none select-none z-10 fixed  inset-0  flex justify-between flex-col">
         <a
           className="pointer-events-auto mt-10 ml-10"
-          href="https://lessons.wawasensei.dev/courses/react-three-fiber"
+          href="#"
         >
           <h1 className="text-4xl tracking-wider text-white">IMÓVEIS</h1>
+          <p id="subtitle" className="text-sm tracking-widest uppercase">revista digital</p>
+          <p className="text-sm"><span>por </span><span id="author" className="text-lg">Carlos Souza</span></p>
         </a>
         <div className="w-full overflow-auto pointer-events-auto flex justify-center">
           <div className="overflow-auto flex items-center gap-4 max-w-full p-10">
