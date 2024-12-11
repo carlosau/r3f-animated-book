@@ -85,15 +85,17 @@ const pageMaterials = [
   }),
 ];
 
+const pageUrl = 'https://carlosau.github.io/r3f-animated-book/'
+
 pages.forEach((page) => {
-    useTexture.preload(`${process.env.PUBLIC_URL}/textures/${page.front}.jpg`);
-    useTexture.preload(`${process.env.PUBLIC_URL}/textures/${page.back}.jpg`);
+    useTexture.preload(`${pageUrl}/textures/${page.front}.jpg`);
+    useTexture.preload(`${pageUrl}/textures/${page.back}.jpg`);
 });
 
 const Page = ({ number, front, back, page, opened, bookClosed, ...props }) => {
   const [picture, picture2, pictureRoughness] = useTexture([
-    `${process.env.PUBLIC_URL}/textures/${front}.jpg`,
-    `${process.env.PUBLIC_URL}/textures/${back}.jpg`,
+    `${pageUrl}/textures/${front}.jpg`,
+    `${pageUrl}/textures/${back}.jpg`,
     ...(number === 0 || number === pages.length - 1
    ? []
       : []),
