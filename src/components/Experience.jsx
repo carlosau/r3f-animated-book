@@ -9,7 +9,7 @@ export const Experience = () => {
         speed={2}
         rotationIntensity={2}
       >
-        <Book />
+        <Book position-x={-0.55} />
       </Float>
       <OrbitControls />
       <Environment preset="studio"></Environment>
